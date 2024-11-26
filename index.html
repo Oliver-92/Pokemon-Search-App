@@ -14,19 +14,24 @@
     <main>
         <h1>Pokémon Search App</h1>
         <div class="container">
-            <form class="search-form" action="">
+            <form role="search" id="search-form">
                 <label for="search-input">Search for Pokémon Name or ID:</label>
-                <input type="text" id="search-input">
+                <input type="text" id="search-input" required>
                 <button id="search-button">Search</button>
             </form>
             <div class="output-container">
                 <div class="output-container-top">
-                    <p id="pokemon-name"></p>
-                    <p id="pokemon-id"></p>
-                    <p id="weight"></p>
-                    <p id="height"></p>
-                    <div class="sprite-container"></div>
-                    <p id="types"></p>
+                    <div class="poke-info">
+                        <p id="pokemon-name"></p>
+                        <p id="pokemon-id"></p>
+                    </div>
+                    <div class="poke-info">
+                        <p id="weight"></p>
+                        <p id="height"></p>
+                    </div>
+                    
+                    <div id="sprite-container"></div>
+                    <div id="types"></div>
                 </div>
                 <div class="output-container-bottom">
                     <table>
@@ -66,8 +71,9 @@
                 <a href="https://www.linkedin.com/in/ezequiel-oliver/" target="_blank"><i class="fi fi-brands-linkedin"></i></a>
             </div>
         </div>
+        <script src="./js/script.js"></script>
     </main>
-
+    
 </body>
 
 </html>
