@@ -2,25 +2,32 @@
     box-sizing: content-box;
 }
 
+:root{
+    --blue-color: rgb(11, 7, 243);
+    --yellow-color: rgb(218, 214, 1);
+}
+
 body {
     background-image: url("../img/01.webp");
 }
 
+/* Title */
 h1 {
     font-family: 'Courier New', Courier, monospace;
     color: rgb(218, 214, 1);
     font-size: 4.5rem;
-    text-shadow: 2px 2px 3px rgb(11, 7, 243),
-        -2px 2px 3px rgb(11, 7, 243),
-        -2px -2px 3px rgb(11, 7, 243),
-        2px -2px 3px rgb(11, 7, 243);
+    text-shadow: 2px 2px 3px var(--blue-color),
+        -2px 2px 3px var(--blue-color),
+        -2px -2px 3px var(--blue-color),
+        2px -2px 3px var(--blue-color);
     margin: 1.5rem auto;
     text-align: center;
 }
 
+/* Container */
 .container {
-    width: 500px;
-    height: 850px;
+    width: 450px;
+    height: 780px;
     background-color: rgb(209, 9, 9);
     margin: auto;
     border-radius: 20px;
@@ -28,12 +35,13 @@ h1 {
     flex-direction: column;
     padding: 15px 5px;
     box-shadow:
-        3px 3px 3px rgb(218, 214, 1),
-        -3px 3px 3px rgb(218, 214, 1),
-        -3px -3px 3px rgb(218, 214, 1),
-        3px -3px 3px rgb(218, 214, 1);
+        3px 3px 3px var(--yellow-color),
+        -3px 3px 3px var(--yellow-color),
+        -3px -3px 3px var(--yellow-color),
+        3px -3px 3px var(--yellow-color);
 }
 
+/* Form */
 #search-form {
     display: flex;
     flex-wrap: wrap;
@@ -51,7 +59,7 @@ label {
     width: 50%;
     font-size: 1rem;
     padding: 0.5rem;
-    border: 2px solid rgb(218, 214, 1);
+    border: 2px solid var(--yellow-color);
 }
 
 #search-button {
@@ -59,18 +67,19 @@ label {
     font-family: Georgia, 'Times New Roman', Times, serif;
     font-size: 1rem;
     font-weight: 600;
-    background-color: rgb(218, 214, 1);
+    background-color: var(--yellow-color);
     border-radius: 10px;
-    color: rgb(11, 7, 243);
-    border: 2px solid rgb(11, 7, 243);
+    color: var(--blue-color);
+    border: 2px solid var(--blue-color);
     letter-spacing: 1px;
 }
 
 #search-button:hover {
     cursor: pointer;
-    background-color: rgb(248, 245, 36);
+    background-color: var(--yellow-color);
 }
 
+/* Output */
 .output-container {
     height: 100%;
 }
@@ -84,53 +93,54 @@ label {
     flex-direction: column;
 }
 
-.poke-info{
+.poke-info {
     display: flex;
-    justify-content:flex-start;
+    justify-content: flex-start;
     gap: 10px;
     margin-left: 1rem;
     font-size: 1.2rem;
-    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
-.poke-info > p{
+.poke-info>p {
     margin: 5px;
 }
 
-#pokemon-name, #pokemon-id{
+#pokemon-name,
+#pokemon-id {
     font-weight: 600;
     margin-top: 1rem;
 }
 
-#sprite-container{
+#sprite-container {
     display: flex;
     justify-content: center;
 }
 
-#sprite{
+#sprite {
     width: 180px;
 }
 
-#types{
+#types {
     font-size: 1.1rem;
     font-weight: 600;
     text-transform: uppercase;
     margin: 1rem;
 }
 
-#types > span{
+#types>span {
     padding: 5px;
     border-radius: 5px;
+    margin-right: 5px;
 }
 
-
-
+/* Table */
 table {
     border-collapse: collapse;
     text-align: center;
     font-size: 1.5rem;
     color: aliceblue;
-    margin: 2.5rem auto;
+    margin: 1.5rem auto;
     width: 90%;
 }
 
@@ -155,78 +165,78 @@ th {
     margin: 5px;
 }
 
-
+/* Colors for pokemon type */
 .normal {
     background-color: #b7b7aa;
-  }
-  
-  .fire {
+}
+
+.fire {
     background-color: #ff6f52;
-  }
-  
-  .water {
+}
+
+.water {
     background-color: #42a1ff;
-  }
-  
-  .electric {
+}
+
+.electric {
     background-color: #fecc33;
-  }
-  
-  .grass {
+}
+
+.grass {
     background-color: #78cc55;
-  }
-  
-  .ice {
+}
+
+.ice {
     background-color: #66ccfe;
-  }
-  
-  .fighting {
+}
+
+.fighting {
     background-color: #d3887e;
-  }
-  
-  .poison {
+}
+
+.poison {
     background-color: #c68bb7;
-  }
-  
-  .ground {
+}
+
+.ground {
     background-color: #dfba52;
-  }
-  
-  .flying {
+}
+
+.flying {
     background-color: #8899ff;
-  }
-  
-  .psychic {
+}
+
+.psychic {
     background-color: #ff66a3;
-  }
-  
-  .bug {
+}
+
+.bug {
     background-color: #aabb23;
-  }
-  
-  .rock {
+}
+
+.rock {
     background-color: #baaa66;
-  }
-  
-  .ghost {
+}
+
+.ghost {
     background-color: #9995d0;
-  }
-  
-  .dragon {
+}
+
+.dragon {
     background-color: #9e93f1;
-  }
-  
-  .dark {
+}
+
+.dark {
     background-color: #b59682;
-  }
-  
-  .steel {
+}
+
+.steel {
     background-color: #abaabb;
-  }
-  
-  .fairy {
+}
+
+.fairy {
     background-color: #ed99ed;
-  }
+}
 
 
 @media screen and (max-width: 510px) {
