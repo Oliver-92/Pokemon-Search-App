@@ -249,6 +249,9 @@ th {
     h1{
         font-size: 3rem;
     }
+    label{
+        font-size: 1.3rem;
+    }
     .poke-info{
         font-size: 1rem;
     }
