@@ -243,6 +243,12 @@ th {
     .container {
         width: 90vw;
     }
+    label{
+        font-size: 1.2rem;
+    }
+    table{
+        margin: 1rem auto;
+    }
 }
 
 @media screen and (max-width: 360px) {
@@ -251,8 +257,5 @@ th {
     }
     .poke-info{
         font-size: 1rem;
-    }
-    table{
-        margin: 1rem auto;
     }
 }
